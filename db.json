@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "id": 1, "name": "Console", "description": "Descrição do Item 1" },
+    { "id": 2, "name": "StarWars", "description": "Descrição do Item 2" },
+    { "id": 3, "name": "Diversos", "description": "Descrição do Item 3" },
+    { "id": 4, "name": "Console2", "description": "Descrição do Item 4" },
+    { "id": 5, "name": "Console3", "description": "Descrição do Item 5" }
+  ]
+}

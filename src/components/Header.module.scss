@@ -1,0 +1,130 @@
+@import '../styles/colors';
+
+header {
+  article {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1rem;
+    margin-inline: auto;
+  }
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+
+    h1 {
+      color: $azul100;
+
+      span {
+        color: $cinza100;
+      }
+    }
+  }
+
+  .headerFormButton {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding: .5rem;
+    border-radius: 20px;
+    background-color: $cinza50;
+
+    input {
+      font-weight: 500;
+      width: 90%;
+      border: none;
+      outline: 0;
+      padding-left: .5rem;
+      background-color: $cinza50;
+    }
+
+    .buttonSearch {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .searchResults {
+    position: absolute;
+    padding: 0.675rem;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: $cinza50;
+
+    li {
+      font-weight: 500;
+      list-style-type: none;
+      line-height: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        filter: opacity(50%);
+      }
+    }
+  }
+
+  .buttonLogin {
+    width: 11.5rem;
+    height: 3.1rem;
+    padding: 1rem;
+    background: none;
+    color: $azul100;
+    border: 1px solid $azul100;
+
+    transition: .4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $branco;
+      border-color: $branco;
+      background-color: $azul100;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    article {
+      justify-content: center;
+      gap: 0.675rem;
+
+      .headerFormButton {
+        gap: 0.475rem;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+
+        .search {
+          width: auto;
+
+          input {
+            display: none;
+          }
+        }
+
+        .buttonLogin {
+          width: 50%;
+          min-width: 110px;
+        }
+      }
+    }
+  }
+}
