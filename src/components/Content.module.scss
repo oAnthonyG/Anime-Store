@@ -1,7 +1,14 @@
 @import '../styles/colors';
 
-.ContentItem{
-  
-  justify-content: center;
-  gap: 1rem;
+section {
+  overflow-x: hidden;
+  width: 90%;
+  margin: auto;
+
+  .ContentItems {
+    display: flex;
+    gap: 1rem;
+  }
+
+
 }

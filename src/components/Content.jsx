@@ -1,4 +1,8 @@
+
 import styles from './Content.module.scss';
+import ContentItems from './ContentItems';
+
+
 
 function Content() {
   return (
@@ -9,43 +13,13 @@ function Content() {
             <h2>Star Wars</h2>
             <button>Ver tudo</button>
           </div>
-          <div className={styles.ContentItem}>
-            <article >
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
-            <article>
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
-            <article>
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
-            <article>
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
-            <article>
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
-            <article>
-              <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
-              <p>Produto XYZ</p>
-              <h3>R$ 60,00</h3>
-              <button>Ver produto</button>
-            </article>
+          <div className={styles.ContentItems}>
+            <ContentItems />
+            <ContentItems />
+            <ContentItems />
+            <ContentItems />
+            <ContentItems />
+            <ContentItems />
           </div>
         </section>
 
