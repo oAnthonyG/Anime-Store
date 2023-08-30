@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import styles from './Content.module.scss';
 import ContentItems from './ContentItems';
 
+import { IoArrowForward } from 'react-icons/io5';
 
 
 function Content() {
@@ -21,11 +22,12 @@ function Content() {
     <>
       <article>
         <section >
-          <div>
-            <h2>Star Wars</h2>
-            <button>Ver tudo</button>
-          </div>
+
           <ul className={styles.ContentItems}>
+            <div className={styles.Content_title_itens}>
+              <h2>Star Wars</h2>
+              <button>Ver tudo <IoArrowForward className={styles.Content_icon} /></button>
+            </div>
             {windowWidth >= 786 ? (
               <>
                 <ContentItems />

@@ -6,10 +6,37 @@ section {
   align-items: center;
 
 
+  .Content_title_itens {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    h2{
+      color: $cinza100;
+    }
+    button{
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+      font-weight: bold;
+      border: none;
+      color: $azul100;
+      background-color: transparent;
+      
+      cursor: pointer;
+
+      .Content_icon{
+        font-size: 20px;
+      }
+    }
+  }
+
   .ContentItems {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 
     article {
       max-width: 176px;
@@ -23,8 +50,6 @@ section {
 
   @media screen and (max-width: 835px) {
     .ContentItems {
-      flex-wrap: nowrap;
-
       article {
         max-width: 164px;
       }

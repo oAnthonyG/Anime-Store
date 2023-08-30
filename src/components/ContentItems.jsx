@@ -3,7 +3,7 @@
 
 
 function ContentItems() {
-  
+
 
   return (
     <article >
