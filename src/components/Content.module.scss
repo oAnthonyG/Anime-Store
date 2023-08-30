@@ -1,14 +1,48 @@
 @import '../styles/colors';
 
 section {
-  overflow-x: hidden;
-  width: 90%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 
   .ContentItems {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+
+    article {
+      max-width: 176px;
+
+      img {
+        width: 100%;
+      }
+    }
+
   }
 
+  @media screen and (max-width: 835px) {
+    .ContentItems {
+      flex-wrap: nowrap;
 
+      article {
+        max-width: 164px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 786px) {
+    .ContentItems {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .ContentItems {
+      article {
+        max-width: 156px;
+      }
+    }
+  }
 }

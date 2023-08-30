@@ -1,10 +1,22 @@
-
+import { useState, useEffect } from "react"
 import styles from './Content.module.scss';
 import ContentItems from './ContentItems';
 
 
 
 function Content() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
   return (
     <>
       <article>
@@ -13,14 +25,26 @@ function Content() {
             <h2>Star Wars</h2>
             <button>Ver tudo</button>
           </div>
-          <div className={styles.ContentItems}>
-            <ContentItems />
-            <ContentItems />
-            <ContentItems />
-            <ContentItems />
-            <ContentItems />
-            <ContentItems />
-          </div>
+          <ul className={styles.ContentItems}>
+            {windowWidth >= 786 ? (
+              <>
+                <ContentItems />
+                <ContentItems />
+                <ContentItems />
+                <ContentItems />
+                {windowWidth >= 1050 && <ContentItems />}
+                {windowWidth >= 1270 && <ContentItems />}
+
+              </>
+            ) : (
+              <>
+                <ContentItems />
+                <ContentItems />
+                <ContentItems />
+                <ContentItems />
+              </>
+            )}
+          </ul>
         </section>
 
         <section>
@@ -51,8 +75,8 @@ function Content() {
 
       </article>
     </>
-  )
-}
+  );
+};
 
 
 export default Content;

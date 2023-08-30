@@ -1,4 +1,10 @@
+
+
+
+
 function ContentItems() {
+  
+
   return (
     <article >
       <img src="../src/assets/StarWars-imgs/Skill.png" alt="" />
@@ -11,3 +17,4 @@ function ContentItems() {
 
 
 export default ContentItems
+
